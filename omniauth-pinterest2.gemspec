@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/omniauth-pinterest/version', __FILE__)
+require File.expand_path('../lib/omniauth-pinterest2/version', __FILE__)
+
 
 Gem::Specification.new do |spec|
   spec.authors       = ["Ugurcan Kaya"]
@@ -14,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.name          = "omniauth-pinterest2"
   spec.require_paths = ["lib"]
-  spec.version       = OmniAuth::Pinterest::VERSION
+  spec.version       = '0.1.0'
 
   spec.add_dependency "omniauth-oauth2", '~> 1.5'
 

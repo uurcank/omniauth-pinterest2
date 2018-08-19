@@ -13,7 +13,7 @@ This gem contains the [OmniAuth](https://github.com/intridea/omniauth/) strategy
 Add this gem to your application's ```Gemfile```:
 
 ```ruby
-gem 'omniauth-pinterest'
+gem 'omniauth-pinterest2'
 ```
 
 Execute the ```bundle``` command to install the gem.
@@ -22,7 +22,7 @@ Next, tell OmniAuth about the Pinterest provider. For a Ruby on Rails applicatio
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :pinterest, ENV['PINTEREST_APP_ID'], ENV['PINTEREST_APP_SECRET']
+  provider :pinterest, ENV['PINTEREST_APP_ID'], ENV['PINTEREST_APP_SECRET'], scope: 'read_public, write_public', redirect_uri: "https://mysite.com/auth/pinterest/callback"
 end
 ```
 
@@ -49,7 +49,7 @@ Here's an example authentication hash available in ```request.env['omniauth.auth
 
 (The MIT License)
 
-Copyright (c) 2015 Jonathan Markwell, endil GmbH and Intridea, Inc.
+Copyright (c) 2018 Ugurcan Kaya, Pasilobus Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
