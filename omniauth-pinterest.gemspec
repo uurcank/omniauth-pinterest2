@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["support@pasilobus.com"]
 
   spec.summary       = "Pinterest OAuth2 Strategy for OmniAuth"
-  spec.homepage      = "'https://github.com/uurcankaya/omniauth-pinterest'"
+  spec.homepage      = "https://github.com/uurcankaya/omniauth-pinterest"
   spec.license       = "MIT"
 
   spec.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
