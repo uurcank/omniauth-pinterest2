@@ -18,7 +18,7 @@ module OmniAuth
       uid { raw_info['id'] }
 
       info { raw_info }
-      
+
       def raw_info
         fields = 'first_name,id,last_name,url,account_type,username,bio,image'
         @raw_info ||= access_token.get("/v1/me/?fields=#{fields}").parsed['data']
@@ -27,7 +27,7 @@ module OmniAuth
       def ssl?
         true
       end
-      
+
        # You can pass +display+, +scope+, or +auth_type+ params to the auth request, if you need to set them dynamically.
       # You can also set these options in the OmniAuth config :authorize_params option.
       #
@@ -43,7 +43,7 @@ module OmniAuth
           params[:scope] ||= DEFAULT_SCOPE
         end
       end
-      
+
         def callback_url
         full_host + script_name + callback_path
       end
